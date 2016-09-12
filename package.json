@@ -1,0 +1,34 @@
+{
+  "name": "ui-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^1.4.23",
+    "babel-preset-es2015": "^6.9.0",
+    "cucumber": "^0.10.2",
+    "del": "^2.2.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-webdriver": "^2.0.1",
+    "minimist": "^1.2.0",
+    "node-uuid": "^1.4.7",
+    "run-sequence": "^1.2.1",
+    "selenium-standalone": "^5.4.0",
+    "wdio-allure-reporter": "^0.1.1",
+    "wdio-cucumber-framework": "^0.1.0",
+    "wdio-firefox-profile-service": "0.0.1",
+    "wdio-teamcity-reporter": "^1.0.2",
+    "webdriverio": "^4.2.10"
+  },
+  "dependencies": {
+    "assert": "^1.4.0",
+    "webdriverjs-angular": "^0.1.3"
+  }
+}
