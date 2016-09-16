@@ -2,6 +2,9 @@ var commands = require('./support/commands'),
     minimist = require('minimist'),
     uuid = require('node-uuid');
 
+var allureReporter = require('./node_modules/wdio-allure-reporter/build/reporter');
+allureReporter.reporterName = 'allure';
+
 var argv = minimist(process.argv);
 
 var tags;
@@ -117,7 +120,7 @@ exports.config = {
     // Test reporter for stdout.
     // The following are supported: dot (default), spec and xunit
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['allure'],
+    reporters: [allureReporter],
     reporterOptions: {
         allure: {
             outputDir: 'allure-results'
@@ -165,9 +168,9 @@ exports.config = {
     // Gets executed before test execution begins. At this point you will have access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
     before: function () {
-        browser.timeouts('script', 2 * 60000);
-        browser.timeouts('page load', 120000);
-        browser.timeouts('implicit', 60000);
+        browser.timeouts('script', 10000);
+        browser.timeouts('page load', 10000);
+        browser.timeouts('implicit', 5000);
 
         browser.windowHandleMaximize();
 
